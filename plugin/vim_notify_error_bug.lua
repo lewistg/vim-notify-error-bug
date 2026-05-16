@@ -1,0 +1,5 @@
+vim.api.nvim_create_user_command("RunJob", function()
+  local notify_bug = require("vim_notify_error_bug")
+  notify_bug.run_job()
+  notify_bug.wait_for_exit_code()
+end, {})
